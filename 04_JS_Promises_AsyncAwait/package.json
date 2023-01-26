@@ -1,0 +1,14 @@
+{
+  "name": "04_js_promises_asyncawait",
+  "version": "1.0.0",
+  "description": "",
+  "main": "callback-hell.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "superagent": "^8.0.9"
+  }
+}
