@@ -12,7 +12,7 @@
     "no-param-reassign": "off",
     "no-return-await": "off",
     "no-underscore-dangle": "off",
-    "no-useless-path-segment": "off",
+    "no-useless-path-segments": "off",
     "class-methods-use-this": "off",
     "prefer-destructuring": ["error", { "object": true, "array": false }],
     "no-unused-vars": ["error", { "argsIgnorePattern":  "req|res|next|val|con" }]
