@@ -126,6 +126,8 @@ const tourSchema = new mongoose.Schema(
 // Compound Index
 tourSchema.index({ price: 1, ratingsAverage: -1 });
 tourSchema.index({ slug: 1 });
+// For Geo Queries Index is must
+tourSchema.index({ startLocation: '2dsphere' });
 
 // Virtual Properties
 tourSchema.virtual('durationWeeks').get(function () {
@@ -191,11 +193,11 @@ tourSchema.post(/^find/, function (docs, next) {
 });
 
 // Aggregation Middleware
-tourSchema.pre('aggregate', function (next) {
-  this.pipeline().unshift({ $match: { secretTour: { $ne: true } } });
-  // console.log(this.pipeline());
-  next();
-});
+// tourSchema.pre('aggregate', function (next) {
+//   this.pipeline().unshift({ $match: { secretTour: { $ne: true } } });
+//   // console.log(this.pipeline());
+//   next();
+// });
 
 const Tour = mongoose.model('Tour', tourSchema);
 
